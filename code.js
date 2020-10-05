@@ -55,8 +55,8 @@ searchPlayer = async () => {
     )
   } else {
     mouseClick(
-      document.querySelectorAll('.search-price-header')[
-        document.querySelectorAll('.search-price-header').length - 1
+      document.querySelectorAll('.search-price-header button')[
+        document.querySelectorAll('.search-price-header button').length - 1
       ]
     )
   }
@@ -69,7 +69,8 @@ searchPlayer = async () => {
       // @TODO BUY ME
       await sleep(250)
       mouseClick(document.querySelector('.buyButton'))
-      // mouseClick(document.querySelector('.Dialog .ut-button-group button'))
+      await sleep(250)
+      mouseClick(document.querySelector('.Dialog .ut-button-group button'))
       // alert('BUY ME')
     })
     .catch(async () => {
